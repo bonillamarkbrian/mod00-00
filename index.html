@@ -47,6 +47,10 @@
 			font-size: 20px;
 		}
 
+		ul.nav a:hover { 
+			color: #66c6ff !important; 
+		}
+
 		.navbar .navbar-nav {
 	        display: inline-block;
 	        float: none;
@@ -81,6 +85,11 @@
 			color: white;
 			padding: 0 10px;
 			margin: 0;
+		}
+
+		span.role {
+			color:#e03c80;
+			font-weight:bold;
 		}
 
 		h2.section {
@@ -152,6 +161,65 @@
     		border: 1px solid gray;
 		}
 
+		.section-image > img {
+          	width: 100%;
+          	padding-top: 70px;
+        }
+
+        .image-tagline {
+          padding: 20px 0px 0px;
+          margin: 0px;
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #252c41;
+        }
+
+        .section-description {
+          text-align: justify;
+        }
+
+        hr {
+          width: 50px;
+          height: 2px;
+          border: none;
+          border-top: 2px solid #f1404b;
+        }
+
+        	
+
+		@media only screen and (max-width: 600px) {
+		    h1#myname {
+			    font-size: 4.0rem;
+			    margin-bottom: 58px;
+			}
+		    h2#role {
+    			font-size: 3.2rem;
+			}
+		    span.role {
+		    	text-align: justify;
+		    }
+
+		    div.scroll {
+		    	display: none;
+		    }
+
+		    div#front-banner {
+		    	padding-top: 95px;
+		    }
+
+		    #header {
+		        padding: 0;
+		    }	
+
+		    #header .banner {
+			    display: inline-block;
+			    vertical-align: middle;
+			    margin: 0 auto;
+			    width: 250px;
+			}
+		}
+
 	</style>
 
 </head>
@@ -186,43 +254,122 @@
 		<div id="front-banner">
 			<div class="text-center banner flex">
 				<h1 id="myname">Hello, I'm Mark Bonilla.</h1>
-				<h2 id="role">I'm a <span style="color:#e03c80;">Full Stack Web Developer.</span></h2>
+				<h2 id="role">I'm a <span class="role">Full Stack Web Developer.</span></h2>
 				<!-- <p style="color: white; padding: 5px 5px; font-size: 22px;">HTML-CSS-JS-Bootstrap-PHP-MySQL-Laravel</p> --> -->
 			</div>
+			<div class="scroll">
 				<p class="scrolldown">
 					<a class="smoothScroll" href="#portfolio-section">
 					<i class="fas fa-arrow-circle-down"></i>
 					</a>
 				</p>
+			</div>
 		</div>
 	</section>
 
 	<section id="portfolio-section">
 		<div class="text-center">
 		<h2 class="section">Portfolio</h2>
-		
-		<div class="container text-center">    
-		  <h5>These items are mainly exercises done whilst undertaking a full stack development course with TUITT Bootcamp.</h5><br>
-		  <div class="row">
-		    <div class="col-sm-4">
-		      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive mbrbottom" style="width:100%" alt="Image">
-		      <p class="label">Capstone 1</p>
-		    </div>
-		    <div class="col-sm-4"> 
-		      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive mbrbottom" style="width:100%" alt="Image">
-		      <p class="label">Capstone 2</p>    
-		    </div>
-		    <div class="col-sm-4">
-		      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive mbrbottom" style="width:100%" alt="Image">
-		    </div>
-		      <p class="label">Capstone 3</p> 
-		  </div>
-		</div><br>
-	</div></section>
+		<div class="container-fluid">
+	      <div class="row">
+	        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
+	          <div class="section-image">
+	            <img src="https://unsplash.it/700/400?image=1033" />
+	          </div>
+	          <div class="section-content">
+	            <p class="image-tagline">Capstone 1</p>
+	            <hr />
+	            <p class="section-description">
+	              Retro street art photo booth kinfolk godard, locavore 8-bit normcore gastropub. Kale chips chambray messenger bag, man bun brunch farm-to-table scenester occupy pork belly meh flannel seitan craft beer. Forage gastropub migas, mumblecore selfies meditation
+	              tilde green juice.
+	            </p>
+	          </div>
+	        </div>
+	        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
+	          <div class="section-image">
+	            <img src="https://unsplash.it/700/400?image=961" />
+	          </div>
+	          <div class="section-content">
+	            <p class="image-tagline">Capstone 2</p>
+	            <hr />
+	            <p class="section-description">
+	              IPhone pop-up lo-fi, actually fashion axe butcher keffiyeh taxidermy bicycle rights master cleanse tattooed. Truffaut mustache pabst heirloom, retro slow-carb meditation stumptown meggings tilde kickstarter. +1 four dollar toast gastropub ugh small batch,
+	              kinfolk gluten-free letterpress cred.
+	            </p>
+	          </div>
+	        </div>
+	        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 section-help animated fadeInUp">
+	          <div class="section-image">
+	            <img src="https://unsplash.it/700/400?image=816" />
+	          </div>
+	          <div class="section-content">
+	            <p class="image-tagline">Capstone 3</p>
+	            <hr />
+	            <p class="section-description">
+	              Organic microdosing cold-pressed pinterest gochujang. Salvia seitan pitchfork, kale chips plaid narwhal kickstarter direct trade single-origin coffee shoreditch austin craft beer polaroid kogi. Master cleanse photo booth irony gochujang, paleo viral cardigan
+	              etsy deep v bushwick bicycle rights.
+	            </p>
+	          </div> <!-- section content -->
+	        </div> <!-- bootstrap colum -->
+	      </div> <!-- end of row -->
+		</div> <!-- /container fluid -->
+		</div>
+	</section>
 
 	<section id="skills">
 		<div class="text-center">
 		<h2 class="section">Skills</h2>
+		<ul class="skills-bar-container">
+		  <li>
+		    <div class="progressbar-title">
+		      <h3>HTML5</h3>
+		      <span class="percent" id="html-pourcent"></span>
+		    </div>
+		    <div class="bar-container">
+		      <span class="progressbar progressred" id="progress-html"></span>
+		    </div>
+		  </li>
+		  <li>
+		    <div class="progressbar-title">
+		      <h3>CSS / SASS</h3>
+		      <span class="percent" id="css-pourcent"></span>
+		    </div>
+		    <div class="bar-container">
+		      <span class="progressbar progressblue" id="progress-css"></span>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="progressbar-title">
+		      <h3>JavaScript / jQuery</h3>
+		      <span class="percent" id="javascript-pourcent"></span>
+		    </div>
+		    <div class="bar-container">
+		      <span class="progressbar progresspurple" id="progress-javascript"></span>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="progressbar-title">
+		      <h3>PHP</h3>
+		      <span class="percent" id="php-pourcent"></span>
+		    </div>
+		    <div class="bar-container">
+		      <span class="progressbar progressorange" id="progress-php"></span>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="progressbar-title">
+		      <h3>AngularJS</h3>
+		      <span class="percent" id="angular-pourcent"></span>
+		    </div>
+		    <div class="bar-container">
+		      <span class="progressbar progressgreen" id="progress-angular"></span>
+		    </div>
+		  </li>
+		  
+		</ul>
 		</div>
 
 	</section>

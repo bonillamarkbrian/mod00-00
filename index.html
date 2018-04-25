@@ -12,10 +12,14 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-	<!-- bootstrapcss -->
+	<!-- bootstrap css -->
 
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
+	<!-- Jquery -->
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
 
 	<!-- Import custom style sheet -->
 
@@ -24,6 +28,8 @@
 	<!-- Import Font awesome -->
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style type="text/css">
 
@@ -179,13 +185,34 @@
           text-align: justify;
         }
 
-        hr {
+        /*hr {
           width: 50px;
           height: 2px;
           border: none;
           border-top: 2px solid #f1404b;
         }
+ 		*/
 
+        .fa-3x {
+        	font-size: 3em;
+        }
+
+        footer{
+		   	background-color: #424558;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    height: 35px;
+		    text-align: center;
+		    color: #CCC;
+		}
+
+		footer p {
+		    padding: 10.5px;
+		    margin: 0px;
+		    line-height: 100%;
+		}
         	
 
 		@media only screen and (max-width: 600px) {
@@ -218,8 +245,28 @@
 			    margin: 0 auto;
 			    width: 250px;
 			}
-		}
 
+			.ruleclass {
+   				 margin-left: 5em;
+    			 margin-right: 5em;
+    		}
+
+    		hr.style16 { 
+				  border-top: 1px dashed #8c8b8b; 
+			} 
+			
+			hr.style16:after { 
+				  content: '\002702'; 
+				  display: inline-block; 
+				  position: relative; 
+				  top: -12px; 
+				  left: 40px; 
+				  padding: 0 3px; 
+				  background: #f0f0f0; 
+				  color: #8c8b8b; 
+				  font-size: 18px; 
+			}
+		}
 	</style>
 
 </head>
@@ -376,10 +423,38 @@
 
 	<section id="aboutme">
 		<div class="text-center">
-		<h2 class="section">About Me</h2>
+		<h2 class="section">About me</h2>
+		
 		</div>
-
 	</section>
+
+	<div class="container text-center">
+	<h3>Contact Me</h3>
+    
+        <div class="text-center center-block" style="margin-bottom: 60px;">
+            <!-- <p class="txt-railway">- Bootsnipp.com -</p> -->
+            <br />
+            <div class="ruleclass">
+   			 <!-- <hr class="style16"> -->
+ 			</div>
+                <a href="#"><i id="social-fb" class="fab fa-facebook-square fa-3x"></i></a>
+	            <a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x"></i></a>
+	            <a href="#"><i id="social-gp" class="fab fa-github-square fa-3x"></i></a>
+	            <a href="mailto:bonilla.markbrian@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x"></i></a>
+	        <div class="ruleclass">
+   			 <hr />
+ 			</div>
+		</div>
+	
+	</div>
+
+	<footer>
+        <p>© 2018 Created by: Mark Bonilla. All rights reserved.</p>
+    </footer>
+
+
+
+</div>
 
 <!-- Get jQuery down below so it can work properly -->
 <!-- You can get any other version, it's just an example -->
@@ -393,11 +468,6 @@
 <!-- include all compiled plugins needed for bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
 
-
-<!-- particle javascript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-
-	
 <script src="assets/js/smoothscroll.js"></script>
 
 </body>

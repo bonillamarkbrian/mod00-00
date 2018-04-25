@@ -12,6 +12,10 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+	<!-- Google Font -->
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
 	<!-- bootstrap css -->
 
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -200,6 +204,7 @@
         footer{
 		   	background-color: #424558;
 		    position: fixed;
+		    width: 100%;
 		    bottom: 0;
 		    left: 0;
 		    right: 0;
@@ -209,12 +214,112 @@
 		}
 
 		footer p {
-		    padding: 10.5px;
-		    margin: 0px;
+		    padding: 0px;
+		    margin: 13px 0 0;
 		    line-height: 100%;
+		    font-size: 14px;
 		}
-        	
 
+		/*top scroll bar */
+
+		.scrolltop {
+			display:none;
+			width:100%;
+			margin:0 auto;
+			position:fixed;
+			bottom:20px;
+			right:10px;	
+		}
+
+		.iscroll {
+			position:absolute;
+			right:20px;
+			bottom:20px;
+			/*background:#b2b2b2;
+			background:rgba(178,178,178,0.7);*/
+			padding:20px;
+			text-align: center;
+			margin: 0 0 0 0;
+			cursor:pointer;
+			transition: 0.5s;
+			-moz-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s; 
+			font-size: 30px;		
+		}
+		.iscroll:hover {
+			/*background:rgba(178,178,178,1.0);*/
+			transition: 0.5s;
+			-moz-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s; 		
+		}
+
+		.iscroll:hover .fas {
+			padding-top:-10px;
+		}
+		.iscroll .fas {
+			font-size:42px;
+			line-height: 42px;
+			width: 42px;
+			height: 42px;
+			margin-top:-5px;
+			margin-left:1px;
+			transition: 0.5s;
+			-moz-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s; 	
+		}	
+
+		/*Contact me button*/
+
+		.svg-wrapper {
+		  height: 60px;
+		  margin: 0 auto;
+		  position: relative;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  width: 320px;
+		}
+
+		.shape {
+		  fill: transparent;
+		  stroke-dasharray: 140 540;
+		  stroke-dashoffset: -474;
+		  stroke-width: 8px;
+		  stroke: #19f6e8;
+		}
+
+		.text {
+		  color: #fff;
+		  font-family: 'Roboto', sans-serif;
+		  font-size: 22px;
+		  letter-spacing: 2px;
+		  line-height: 32px;
+		  position: relative;
+		  top: -48px;
+		  /*font-weight: bold;*/
+		}
+
+		@keyframes draw {
+		  0% {
+		    stroke-dasharray: 140 540;
+		    stroke-dashoffset: -474;
+		    stroke-width: 8px;
+		  }
+		  100% {
+		    stroke-dasharray: 760;
+		    stroke-dashoffset: 0;
+		    stroke-width: 2px;
+		  }
+		}
+
+		.svg-wrapper:hover .shape {
+		  -webkit-animation: 0.5s draw linear forwards;
+		  animation: 0.5s draw linear forwards;
+		}
+			
+        	
 		@media only screen and (max-width: 600px) {
 		    h1#myname {
 			    font-size: 4.0rem;
@@ -266,8 +371,17 @@
 				  color: #8c8b8b; 
 				  font-size: 18px; 
 			}
+
+			footer p {
+		    padding: 0px;
+		    margin: 13px 0 0;
+		    line-height: 100%;
+		    font-size: 10px;
+			}
 		}
 	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
@@ -302,7 +416,12 @@
 			<div class="text-center banner flex">
 				<h1 id="myname">Hello, I'm Mark Bonilla.</h1>
 				<h2 id="role">I'm a <span class="role">Full Stack Web Developer.</span></h2>
-				<!-- <p style="color: white; padding: 5px 5px; font-size: 22px;">HTML-CSS-JS-Bootstrap-PHP-MySQL-Laravel</p> --> -->
+				<div class="svg-wrapper text-center" style="margin-top: 120px;">
+  					<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+   						 <rect class="shape" height="60" width="320" />
+  					</svg>
+   				<div class="text">Contact Me</div>
+				</div>
 			</div>
 			<div class="scroll">
 				<p class="scrolldown">
@@ -321,7 +440,7 @@
 	      <div class="row">
 	        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
 	          <div class="section-image">
-	            <img src="https://unsplash.it/700/400?image=1033" />
+	            <img src="https://unsplash.it/700/400?image=1033">
 	          </div>
 	          <div class="section-content">
 	            <p class="image-tagline">Capstone 1</p>
@@ -334,7 +453,7 @@
 	        </div>
 	        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
 	          <div class="section-image">
-	            <img src="https://unsplash.it/700/400?image=961" />
+	            <img src="https://unsplash.it/700/400?image=961">
 	          </div>
 	          <div class="section-content">
 	            <p class="image-tagline">Capstone 2</p>
@@ -347,7 +466,7 @@
 	        </div>
 	        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 section-help animated fadeInUp">
 	          <div class="section-image">
-	            <img src="https://unsplash.it/700/400?image=816" />
+	            <img src="https://unsplash.it/700/400?image=816">
 	          </div>
 	          <div class="section-content">
 	            <p class="image-tagline">Capstone 3</p>
@@ -429,7 +548,7 @@
 	</section>
 
 	<div class="container text-center">
-	<h3>Contact Me</h3>
+	
     
         <div class="text-center center-block" style="margin-bottom: 60px;">
             <!-- <p class="txt-railway">- Bootsnipp.com -</p> -->
@@ -437,9 +556,9 @@
             <div class="ruleclass">
    			 <!-- <hr class="style16"> -->
  			</div>
-                <a href="#"><i id="social-fb" class="fab fa-facebook-square fa-3x"></i></a>
-	            <a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x"></i></a>
-	            <a href="#"><i id="social-gp" class="fab fa-github-square fa-3x"></i></a>
+                <a href="https://www.facebook.com/markbrian.bonilla" target="_blank"><i id="social-fb" class="fab fa-facebook-square fa-3x"></i></a>
+	            <a href="# target="_blank"><i id="social-tw" class="fab fa-twitter-square fa-3x"></i></a>
+	            <a href="https://github.com/bonillamarkbrian" target="_blank""><i id="social-gp" class="fab fa-github-square fa-3x"></i></a>
 	            <a href="mailto:bonilla.markbrian@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x"></i></a>
 	        <div class="ruleclass">
    			 <hr />
@@ -449,8 +568,12 @@
 	</div>
 
 	<footer>
-        <p>© 2018 Created by: Mark Bonilla. All rights reserved.</p>
+        <p>© 2018 Created by: Mark Bonilla. All Rights Reserved.</p>
     </footer>
+
+    <div class='scrolltop'>
+    <div class='iscroll icon'><i class="fas fa-arrow-circle-up"></i></div>
+	</div>
 
 
 
@@ -469,6 +592,23 @@
 <script src="assets/js/bootstrap.min.js"></script>
 
 <script src="assets/js/smoothscroll.js"></script>
+
+<script type="text/javascript">
+	
+	$(window).scroll(function() {
+    if ($(this).scrollTop() > 50 ) {
+        $('.scrolltop:hidden').stop(true, true).fadeIn();
+    } else {
+        $('.scrolltop').stop(true, true).fadeOut();
+    }
+	});
+
+	$('.iscroll').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+});
+
+</script>
 
 </body>
 </html>

@@ -75,11 +75,11 @@
 			
 			min-height: 100vh;
 			width: 100%;
-			padding: 50px;
+			padding: 188px;
 		}
 
 		#header {
-			/*background-color: #2e3445;*/
+			/*background-color: #6C7A89;*/
 			background-image: url('assets/img/wallpaper-web2.jpg');
 		}
 
@@ -104,26 +104,67 @@
 
 		h2.section {
 			color: black;
-			font-size: 35px;
+			font-size: 4rem;
+    		letter-spacing: 0.4rem;
 			font-weight: bold;
 			padding: 15px;
     		margin: 0;
     		text-transform: uppercase;
 		}
 
-		#portfolio-section, #skills, #aboutme {
+		/*button hover*/
+
+		.btn-hover {
+		    width: 200px;
+		    font-size: 16px;
+		    font-weight: 600;
+		    color: #fff;
+		    cursor: pointer;
+		    /*margin: 20px;*/
+		    margin-top: 90px;
+		    height: 55px;
+		    text-align:center;
+		    border: none;
+		    background-size: 300% 100%;
+
+		    /*border-radius: 50px;*/
+		    moz-transition: all .4s ease-in-out;
+		    -o-transition: all .4s ease-in-out;
+		    -webkit-transition: all .4s ease-in-out;
+		    transition: all .4s ease-in-out;
+		}
+
+		.btn-hover:hover {
+		    background-position: 100% 0;
+		    moz-transition: all .4s ease-in-out;
+		    -o-transition: all .4s ease-in-out;
+		    -webkit-transition: all .4s ease-in-out;
+		    transition: all .4s ease-in-out;
+		}
+
+		.btn-hover:focus {
+		    outline: none;
+		}
+
+		.btn-hover.color-9 {
+		    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+		    box-shadow: 0 2px 12px 0 rgba(65, 132, 234, 0.75);
+		}
+
+		#portfolio-section, #aboutme {
 			min-height: 100vh;
 			width: 100%;
 		}
 
 		#skills {
-			background-color: white;
+			min-height: 80vh;
+			background-color: #ABB7B7;
 		}
 		#portfolio-section {
-			background-color: lightgray;
+			background-color: #F2F1EF;
 		}
 		#aboutme {
-			background-color: lightgray;
+			background-color: #F2F1EF;
 		}
 
 		#header .banner {
@@ -135,7 +176,8 @@
 		}
 
 		#front-banner {
-			padding: 155px 30px;
+			position: relative;
+    		padding: 0;
 		}
 
 		.scrolldown a:hover {
@@ -143,10 +185,10 @@
 		}
 		
 		.scrolldown a {
-			position: absolute;
-			bottom: 50px;
+			position: relative;
 			left: 50%;
 			margin-left: -29px;
+			margin-top: 50px;
 			color: #fff;
 			display: block;
 			height: 42px;
@@ -203,21 +245,19 @@
 
         footer{
 		   	background-color: #424558;
-		    position: fixed;
+		    height: 50px;
 		    width: 100%;
-		    bottom: 0;
-		    left: 0;
-		    right: 0;
-		    height: 35px;
 		    text-align: center;
 		    color: #CCC;
 		}
 
 		footer p {
-		    padding: 0px;
-		    margin: 13px 0 0;
-		    line-height: 100%;
-		    font-size: 14px;
+		    padding: 12px 10px;
+		    margin: 5px 0 0;
+		    line-height: 25px;
+		    font-size: 12px;
+		    text-align: center;
+
 		}
 
 		/*top scroll bar */
@@ -271,62 +311,70 @@
 			-o-transition: 0.5s; 	
 		}	
 
-		/*Contact me button*/
+		/*Skills bar*/
 
-		.svg-wrapper {
-		  height: 60px;
-		  margin: 0 auto;
-		  position: relative;
-		  top: 50%;
-		  transform: translateY(-50%);
-		  width: 320px;
+		.our-skills .progress-bar {
+		    line-height: 36px;
+		   	font-size: 16px;
+		    font-weight: bold;
+		    text-align: left;
+		    text-indent: 10px;
 		}
 
-		.shape {
-		  fill: transparent;
-		  stroke-dasharray: 140 540;
-		  stroke-dashoffset: -474;
-		  stroke-width: 8px;
-		  stroke: #19f6e8;
+		.progress-bar-success {
+		    background-color: #5cb85c;
 		}
 
-		.text {
-		  color: #fff;
-		  font-family: 'Roboto', sans-serif;
-		  font-size: 22px;
-		  letter-spacing: 2px;
-		  line-height: 32px;
-		  position: relative;
-		  top: -48px;
-		  /*font-weight: bold;*/
+		.our-skills .progress-bar {
+		    line-height: 36px;
+		    font-size: 15px;
+		    font-weight: bold;
+		    text-align: left;
+		    text-indent: 10px;
 		}
 
-		@keyframes draw {
-		  0% {
-		    stroke-dasharray: 140 540;
-		    stroke-dashoffset: -474;
-		    stroke-width: 8px;
-		  }
-		  100% {
-		    stroke-dasharray: 760;
-		    stroke-dashoffset: 0;
-		    stroke-width: 2px;
-		  }
+		.progress-bar-danger {
+		    background-color: #d9534f;
 		}
 
-		.svg-wrapper:hover .shape {
-		  -webkit-animation: 0.5s draw linear forwards;
-		  animation: 0.5s draw linear forwards;
+		.our-skills .progress-bar {
+		    line-height: 36px;
+		    font-size: 15px;
+		    font-weight: bold;
+		    text-align: left;
+		    text-indent: 10px;
 		}
-			
-        	
+
+
+		.progress-bar-warning {
+		    background-color: #f0ad4e; }
+		    
+		.our-skills .progress-bar {
+		    line-height: 36px;
+		    font-size: 15px;
+		    font-weight: bold;
+		    text-align: left;
+		    text-indent: 10px;
+		}
+
+		.progress-bar-info {
+		    background-color: #5bc0de;
+		}
+
+		.our-skills .progress {
+		    height: 36px;
+		}
+
+
+	
 		@media only screen and (max-width: 600px) {
 		    h1#myname {
 			    font-size: 4.0rem;
 			    margin-bottom: 58px;
 			}
 		    h2#role {
-    			font-size: 3.2rem;
+    			font-size: 3.9rem;
+    			letter-spacing: 1px;
 			}
 		    span.role {
 		    	text-align: justify;
@@ -371,13 +419,6 @@
 				  color: #8c8b8b; 
 				  font-size: 18px; 
 			}
-
-			footer p {
-		    padding: 0px;
-		    margin: 13px 0 0;
-		    line-height: 100%;
-		    font-size: 10px;
-			}
 		}
 	</style>
 
@@ -416,11 +457,7 @@
 			<div class="text-center banner flex">
 				<h1 id="myname">Hello, I'm Mark Bonilla.</h1>
 				<h2 id="role">I'm a <span class="role">Full Stack Web Developer.</span></h2>
-				<div class="svg-wrapper text-center" style="margin-top: 120px;">
-  					<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-   						 <rect class="shape" height="60" width="320" />
-  					</svg>
-   				<div class="text">Contact Me</div>
+					<button class="btn-hover color-9">Contact Me</button>
 				</div>
 			</div>
 			<div class="scroll">
@@ -435,7 +472,7 @@
 
 	<section id="portfolio-section">
 		<div class="text-center">
-		<h2 class="section">Portfolio</h2>
+		<h2 class="section">Portfolio Projects</h2>
 		<div class="container-fluid">
 	      <div class="row">
 	        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
@@ -484,58 +521,54 @@
 
 	<section id="skills">
 		<div class="text-center">
-		<h2 class="section">Skills</h2>
-		<ul class="skills-bar-container">
-		  <li>
-		    <div class="progressbar-title">
-		      <h3>HTML5</h3>
-		      <span class="percent" id="html-pourcent"></span>
-		    </div>
-		    <div class="bar-container">
-		      <span class="progressbar progressred" id="progress-html"></span>
-		    </div>
-		  </li>
-		  <li>
-		    <div class="progressbar-title">
-		      <h3>CSS / SASS</h3>
-		      <span class="percent" id="css-pourcent"></span>
-		    </div>
-		    <div class="bar-container">
-		      <span class="progressbar progressblue" id="progress-css"></span>
-		    </div>
-		  </li>
-		  
-		  <li>
-		    <div class="progressbar-title">
-		      <h3>JavaScript / jQuery</h3>
-		      <span class="percent" id="javascript-pourcent"></span>
-		    </div>
-		    <div class="bar-container">
-		      <span class="progressbar progresspurple" id="progress-javascript"></span>
-		    </div>
-		  </li>
-		  
-		  <li>
-		    <div class="progressbar-title">
-		      <h3>PHP</h3>
-		      <span class="percent" id="php-pourcent"></span>
-		    </div>
-		    <div class="bar-container">
-		      <span class="progressbar progressorange" id="progress-php"></span>
-		    </div>
-		  </li>
-		  
-		  <li>
-		    <div class="progressbar-title">
-		      <h3>AngularJS</h3>
-		      <span class="percent" id="angular-pourcent"></span>
-		    </div>
-		    <div class="bar-container">
-		      <span class="progressbar progressgreen" id="progress-angular"></span>
-		    </div>
-		  </li>
-		  
-		</ul>
+		<h2 class="section" style="color:white">Skills and Proficiency</h2>
+			<div class="container" style="padding: 50px 20px;">
+                <div class="row">
+                    
+                    <!-- Start Progress Skills -->
+                    
+                    <div class="col-md-5">
+                        <div class="skills-progress">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                    Html5 / Css3
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    PHP / MySQL
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    Javascript / jQuery
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                    Bootstrap
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- End Progress Skills -->
+                    
+                    <!-- Start Team Info -->
+                    
+                    <div class="col-md-6 col-md-offset-1">
+                        <div class="skills-info">
+                            <h3>About The Team</h3>
+                            <p class="lead text-justify">I am currently honing my Web Development skills at TUITT.
+                            I want to learn more and utilize my skills in the field of Information Technology and to help solve real world challenges. I often use the ff applications: Git, Github, Codepen and Freecodecamp. </p>
+                            <button type="button" class="btn btn-primary">Download Resume</button>
+                        </div>
+                    </div>
+                    
+                    <!-- End Team Info -->
+                    
+                </div>
+            </div>
 		</div>
 
 	</section>
